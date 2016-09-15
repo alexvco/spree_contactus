@@ -1,4 +1,5 @@
-module Spree
-  Contact.class_eval do
+module Spree  
+  class Contact
+    include ActiveModel::Validations
   end
 end
