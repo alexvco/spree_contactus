@@ -1,4 +1,4 @@
-class RenameContactToSpreeContacts < ActiveRecord::Migration
+class RenameContactsToSpreeContacts < ActiveRecord::Migration
   def change
     rename_table :contacts, :spree_contacts
   end
