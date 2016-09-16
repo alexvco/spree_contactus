@@ -1,7 +1,7 @@
 module Spree
   class ContactsController < Spree::StoreController
     def new
-      @contact = Contact.new(contact_params)
+      @contact = Contact.new
     end
 
     def create
