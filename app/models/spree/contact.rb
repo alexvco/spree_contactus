@@ -1,5 +1,5 @@
 module Spree  
-  class Contact
-    include ActiveModel::Validations
+  class Contact < ActiveRecord::Base
+    
   end
 end
