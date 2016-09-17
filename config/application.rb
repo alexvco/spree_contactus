@@ -20,4 +20,4 @@ module Spree
       enable_starttls_auto: true 
     }
   end
-end
+end 
