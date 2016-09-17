@@ -13,8 +13,8 @@ module Spree
       address:              "smtp.gmail.com",
       port:                 587,
       domain:               'mail.google.com',
-      user_name:            "me@gmail.com",
-      password:             "me",
+      user_name:            ENV['TOY_EMAIL'],
+      password:             ENV['TOY_PASS'],
       authentication:       :plain,
       enable_starttls_auto: true 
     }

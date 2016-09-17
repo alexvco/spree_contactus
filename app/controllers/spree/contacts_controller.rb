@@ -7,8 +7,8 @@ module Spree
     def create
       @contact = Contact.new(contact_params)
       if @contact.save
-        # ContactMailer.contact_email(@contact).deliver
-        redirect_to root_path, notice: 'Thank you very much'
+        ContactMailer.contact_email(@contact).deliver
+        redirect_to root_path, notice: 'Thank you for contacting us, we will get back to you shortly.'
       else
         render :new
       end

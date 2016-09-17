@@ -1,11 +1,11 @@
 module Spree
   class ContactMailer < Spree::BaseMailer
-    default from: 'me@gmail.com'
+    default from: "#{ENV['TOY_EMAIL']}"
     # layout 'mailer'
 
     def contact_email(contact)
       @contact = contact
-      mail(to: 'me@gmail.com', subject: 'Welcome to Toys')
+      mail(to: "#{ENV['TOY_EMAIL']}", subject: 'Thank you for contacting Center for Toys')
     end
   end
 end
