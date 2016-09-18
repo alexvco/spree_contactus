@@ -8,15 +8,14 @@ module Spree
     config.action_mailer.raise_delivery_errors = true
     config.action_mailer.default :charset => "utf-8"
     config.action_mailer.default content_type: "text/html"
-    host = 'alexmystore.herokuapp.com'
-    config.action_mailer.default_url_options = { host: host }
+    config.action_mailer.default_url_options = { host: ENV['HOST'] }
     config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings = {
       address:              "smtp.gmail.com",
       port:                 '587',
       domain:               'mail.google.com',
-      user_name:            'centerfortoys@gmail.com',
-      password:             'Centerfortoys4$',
+      user_name:             ENV['TOY_EMAIL'],
+      password:              ENV['TOY_PASS'],
       authentication:       :plain,
       enable_starttls_auto: true 
     }
